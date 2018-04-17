@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void buscar(View view){
         EditText ed = (EditText)findViewById(R.id.editText);
-        if(ed.getText().equals("")){
+        if(ed.getText().toString().isEmpty()){
             Toast.makeText(this, "Informe Cnpj válido !", Toast.LENGTH_SHORT).show();
         }else {
             Intent intent = new Intent(this, ApresentaBusca.class);
